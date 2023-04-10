@@ -18,9 +18,6 @@ Si todos los filósofos cogen el palillo de su derecha al mismo tiempo, todos se
 ## Librerias.
 
 ~~~
-~~~
-
-~~~
 import argparse
 import threading
 import time
