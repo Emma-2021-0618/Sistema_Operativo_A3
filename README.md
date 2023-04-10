@@ -7,7 +7,7 @@
 - Enmanuel Sanchez Rodriguez 2021-0618
 - Albert Francisco Hernandez Sanchez 2019-0126
 
-# Problema de los filosofos
+# Problema de los filosofos.
 
 Hay cinco filósofos sentados alrededor de una mesa que pasan su vida cenando y pensando. Cada uno dispone de un plato de arroz y un palillo a la izquierda de su plato, pero para comer son necesarios dos palillos y cada filósofo sólo puede coger el que está a su izquierda o el que hay a su derecha. Con un solo palillo en la mano no tienen más remedio que esperar hasta que atrapen otro y puedan seguir comiendo.
 
@@ -15,7 +15,7 @@ Si dos filósofos adyacentes intentan tomar el mismo palillo a la vez se produce
 
 Si todos los filósofos cogen el palillo de su derecha al mismo tiempo, todos se quedarán esperando eternamente porque alguien debe liberar el palillo que les falta, cosa que nadie hará porque todos se encuentran en la misma situación (esperando que alguno deje su palillo). Llegado esto, los filósofos se morirán de hambre. A este bloqueo mutuo se le denomina interbloqueo o deadlock.
 
-## librerias
+## Librerias.
 
 ~~~
 ~~~
@@ -27,9 +27,9 @@ import time
 import random
 ~~~
 
-librerias las cuales usa el programa para funciona ademas de usar otras para leer parametros que pasaremos por consola con diferentes paranmetros usando la libreria argparse, la libreria de hilos para usarla de manera parelala, libreria de time para usar temporizadores y la libreia random para usar numeros pseudo-aleatorio
+Librerias las cuales usa el programa para funciona ademas de usar otras para leer parametros que pasaremos por consola con diferentes paranmetros usando la libreria argparse, la libreria de hilos para usarla de manera parelala, libreria de time para usar temporizadores y la libreia random para usar numeros pseudo-aleatorio.
 
-## Variables iniciarles
+## Variables iniciarles.
 
 ~~~
 estadoFilosofo = None
@@ -46,11 +46,11 @@ ESTADO_SATISFECHO = "S"
 ESTADO_MUERTO = "M"
 ~~~
 
-variables las cuales declaramos para el uso correcto del programa ademas de otras variables de configuracion del programa, como es declarar el estado del filosofo como ninguno, declarar la curacha y que este vacia, la cantidad de filososfos, el numero de intentos de cada filosofo antes de morir, el tiemp que en come cada filosofo y el tiempo que dura cada uno para tomar los palillos.
+Variables las cuales declaramos para el uso correcto del programa ademas de otras variables de configuracion del programa, como es declarar el estado del filosofo como ninguno, declarar la curacha y que este vacia, la cantidad de filososfos, el numero de intentos de cada filosofo antes de morir, el tiemp que en come cada filosofo y el tiempo que dura cada uno para tomar los palillos.
 
-tambien declarar los estados de los filosofos que esta bien declarados y asi se puede identificar ademas de que se puede modificar o alterar su comportamiento.
+Tambien declarar los estados de los filosofos que esta bien declarados y asi se puede identificar ademas de que se puede modificar o alterar su comportamiento.
 
-## Palillos
+## Palillos.
 ~~~
 def agarrarPalillos(id_filosofo):
     """Trata de tomar los palillos izquierdo y derecho (en ese orden) y 
@@ -73,12 +73,12 @@ def liberarPalillos(id_filosofo):
     candados[id_filosofo].release()
     candados[(id_filosofo - 1) % CANTIDAD_FILOSOFOS].release()
 ~~~
-en la primera funcion el filosofo busca el palillo de izquierda a derecha a ver si puede comer o esperar a que llegue a una posicion mas o menor a el, si no pasa turno.
+En la primera funcion el filosofo busca el palillo de izquierda a derecha a ver si puede comer o esperar a que llegue a una posicion mas o menor a el, si no pasa turno.
 
-la segunda funcion hace de liberacion de los palillos para que otro filosofo pueda comer cuando el ya esta sastifecho.
+La segunda funcion hace de liberacion de los palillos para que otro filosofo pueda comer cuando el ya esta sastifecho.
 
 
-## inicio
+## Inicio.
 ~~~
 def iniciarSimulacion(id_filosofo):
     """Función que va ejecutar cada filosofo(hilo)"""
@@ -118,10 +118,10 @@ def iniciarSimulacion(id_filosofo):
             time.sleep(tiempo_reintentar)
 ~~~
 
-esta funcion es una columna vetrebal del programa ya que cada filosofo pasa por ella para cumplir o cambiar su estado y saber si seguir o no seguir en el proceso de alimentacion de cada filosofo individualmente ademas de resetear ciertos valores o aumentar dependiendo de que este a su dispocion ademas de que si comen entrar en el estado de filosofar que llibera del estado hambriento un tiempo o en el caso de que el fallo es mayor el filosofo muera.
+Esta funcion es una columna vetrebal del programa ya que cada filosofo pasa por ella para cumplir o cambiar su estado y saber si seguir o no seguir en el proceso de alimentacion de cada filosofo individualmente ademas de resetear ciertos valores o aumentar dependiendo de que este a su dispocion ademas de que si comen entrar en el estado de filosofar que llibera del estado hambriento un tiempo o en el caso de que el fallo es mayor el filosofo muera.
 
 
-## Argumentos
+## Argumentos.
 ~~~
 def obtenerArgumentos():
     """Función que lee los argumentos pasados por la línea de comandos"""
@@ -137,10 +137,10 @@ def obtenerArgumentos():
     return parser.parse_args()
 ~~~
 
-funcion que se encarga de leer y procesar las variable superiores y que tiene por defecto variabels exactas en el caso de no seer modificada.
+Funcion que se encarga de leer y procesar las variable superiores y que tiene por defecto variabels exactas en el caso de no seer modificada.
 
 
-## inicio de los filosofos
+## Inicio de los filosofos.
 
 ~~~
 if __name__ == '__main__':
@@ -173,4 +173,4 @@ if __name__ == '__main__':
 
 ~~~
 
-se establecer los parametros modificados en el programa para leer y iniciar el estado de los filosfos  tambien la liberacion del candados, abrimos los hilos y los iniciamos uno a uno, luego ejecutamos los hilos y ya solo queda esperar que termine de iniciar para unirlos
+Se establecer los parametros modificados en el programa para leer y iniciar el estado de los filosfos  tambien la liberacion del candados, abrimos los hilos y los iniciamos uno a uno, luego ejecutamos los hilos y ya solo queda esperar que termine de iniciar para unirlos.
