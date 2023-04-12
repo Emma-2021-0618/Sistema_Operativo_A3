@@ -174,7 +174,7 @@ Se establecer los parametros modificados en el programa para leer y iniciar el e
 
 ## Video (Explicación)
 
-[Haga Clic aquí]() 
+[Haga Clic aquí](https://miucateciedu-my.sharepoint.com/:v:/g/personal/20190126_miucateci_edu_do/EZh62Vbliq9Hg2Q7Lj-a6wEB6vQdVwF8hCIjpd-EVya5Gw?e=FZMrIM) 
 
 <br>
 
