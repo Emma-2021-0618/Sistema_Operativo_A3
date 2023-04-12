@@ -176,6 +176,12 @@ Se establecer los parametros modificados en el programa para leer y iniciar el e
 
 [Haga Clic aquí]() 
 
+<br>
+
+## Breve investigación.
+
+<br>
+
 ## Concurrencia.
 La programación concurrente envuelve lenguajes de programación y algoritmos usados para implementar los sistemas concurrentes. La programación concurrente es considerada más general que la programación paralela porque puede envolver comunicación de patrones dinámicamente. Los sistemas paralelos siempre tienen un sistema de comunicación bien construido. La meta final de la programación concurrente incluye exactitud, rendimiento y robustez. Sistemas concurrentes como los Sistemas Operativos y sistemas de manejo de bases de datos están generalmente diseñados para operar indefinidamente, incluyendo recuperación automática de las fallas, y no terminar su ejecución inesperadamente. Algunos sistemas concurrentes implementan una concurrencia transparente, en el cual las entidades de concurrencia computacional por un único recurso compartido, pero las complejidades de las mismas están escondidas del programador.Como ellas usan recursos compartidos, los sistemas concurrentes en general requieren la inclusión de un tipo de arbiter en algún lugar en la implementación (normalmente en el hardware), para controlar los accesos a esos recursos. El uso arbitrario introduce la posibilidad de indeterminacy in concurrent computation que tiene mayores implicaciones en la práctica, incluyendo la correctitud y el rendimiento.Algunos modelos de programación concurrente incluyen coprocesses y deterministic concurrency. En estos modelos, hilos de control explícitamente mantienen esos pequeños espacios de tiempos, ya sea al sistema o a otro proceso.
 
